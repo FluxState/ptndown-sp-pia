@@ -166,5 +166,5 @@ workflows:
             tags:
               only: /^\d+\.\d+.*/
           requires:
-            - build-ptndown-pia-sp-image
-            - build-ptndown-pia-sp-image-arm
+            - build-ptndown-sp-pia-image
+            - build-ptndown-sp-pia-image-arm
