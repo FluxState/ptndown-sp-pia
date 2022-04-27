@@ -38,11 +38,10 @@ COPY crontab /etc/cron.d/ptndown-pia
 ARG PIA_USER="**None**"
 ARG PIA_PASS="**None**"
 ARG DBN_PROMETHEUS="true"
-ARG SP_USERAGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
+ARG SP_USERAGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36"
 
 ENV PIA_USER=$PIA_USER \
     PIA_PASS=$PIA_PASS \
-    DBN_PROMETHEUS=$DBN_PROMETHEUS \
     SP_USERAGENT=$SP_USERAGENT
 
 RUN chmod 0644 /etc/cron.d/ptndown-pia && \
