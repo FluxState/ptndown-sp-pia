@@ -29,6 +29,7 @@ RUN apt-get update && \
     cron curl dnsutils dumb-init jq openvpn psmisc && \
     apt-get autoremove -y && apt-get clean && rm -fr /var/lib/apt/lists/* /var/log/* /tmp/*
 
+COPY hosts /config/hosts
 COPY regions /config/regions
 COPY resolv.conf /config/resolv.conf
 COPY run.sh /run.sh
@@ -46,6 +47,8 @@ ENV PIA_USER=$PIA_USER \
 RUN chmod 0644 /etc/cron.d/ptndown-pia && \
     crontab /etc/cron.d/ptndown-pia && \
     touch /var/log/cron.log
+
+RUN echo /config/hosts > /etc/hosts
 
 COPY --from=Builder /opt/pia/ /opt/pia/
 COPY --from=Builder /go/ /go/
