@@ -48,8 +48,6 @@ RUN chmod 0644 /etc/cron.d/ptndown-pia && \
     crontab /etc/cron.d/ptndown-pia && \
     touch /var/log/cron.log
 
-RUN echo /config/hosts > /etc/hosts
-
 COPY --from=Builder /opt/pia/ /opt/pia/
 COPY --from=Builder /go/ /go/
 COPY --from=Builder /opt/stoppropaganda/stoppropaganda.exe /go/bin/
