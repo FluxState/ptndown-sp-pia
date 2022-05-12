@@ -1,6 +1,6 @@
 FROM golang:1.18-bullseye as Builder
 
-ARG CACHEBUST="1"
+ARG CACHEBUST="3"
 RUN echo "$CACHEBUST"
 ARG CI=""
 
