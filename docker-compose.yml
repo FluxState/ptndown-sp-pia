@@ -27,7 +27,6 @@ services:
     - pravdoryb.info:95.142.44.8
     - russia-insider.com:158.69.116.70
     - sbarro-pizza.ru:185.165.123.36
-    - slovodel.com:94.198.50.179
     - www.voltairenet.org:65.108.13.235
     - wpristav.ru:193.109.246.53
   image: fluxstate/ptndown-sp-pia
