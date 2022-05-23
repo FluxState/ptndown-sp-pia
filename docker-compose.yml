@@ -13,22 +13,16 @@ services:
   devices:
     - /dev/net/tun
   extra_hosts:
-    - 2x2.su:46.254.19.78
     - 47news.ru:77.244.221.63
     - donbasstoday.ru:193.233.15.62
     - fine-news.ru:213.139.208.57
-    - infobrics.org:92.53.96.240
-    - jpgazeta.ru:94.198.55.160
-    - k-politika.ru:91.228.154.78
     - mosregtoday.ru:178.154.213.69
     - novorossiia.ru:87.236.16.191
     - pizzahut.ru:185.98.84.80
-    - politros.com:152.89.219.221
     - pravdoryb.info:95.142.44.8
     - russia-insider.com:158.69.116.70
     - sbarro-pizza.ru:185.165.123.36
     - www.voltairenet.org:65.108.13.235
-    - wpristav.ru:193.109.246.53
   image: fluxstate/ptndown-sp-pia
   ports:
     - "8049/tcp"
