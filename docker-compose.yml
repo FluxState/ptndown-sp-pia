@@ -19,10 +19,10 @@ services:
     - mosregtoday.ru:178.154.213.69
     - novorossiia.ru:87.236.16.191
     - pizzahut.ru:185.98.84.80
-    - pravdoryb.info:95.142.44.8
     - russia-insider.com:158.69.116.70
     - sbarro-pizza.ru:185.165.123.36
     - www.voltairenet.org:65.108.13.235
+    - wpristav.ru:193.109.246.53
   image: fluxstate/ptndown-sp-pia
   ports:
     - "8049/tcp"

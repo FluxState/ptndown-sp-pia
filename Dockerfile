@@ -1,6 +1,6 @@
-FROM golang:1.18-bullseye as Builder
+FROM golang:1.18-bullseye as builder
 
-ARG CACHEBUST="3"
+ARG CACHEBUST="1"
 RUN echo "$CACHEBUST"
 ARG CI=""
 
@@ -15,7 +15,7 @@ RUN git clone --branch 'cleaned4pia' --depth 1 https://github.com/FluxState/stop
     CGO_ENABLED=0 go build -ldflags="-s -w" -o stoppropaganda.exe ./cmd/stoppropaganda/main.go
 
 
-FROM golang:1.18-bullseye as Runner
+FROM golang:1.18-bullseye as runner
 
 ARG CACHEBUST="1"
 RUN echo "$CACHEBUST"
@@ -46,8 +46,8 @@ RUN chmod 0644 /etc/cron.d/ptndown-pia && \
     crontab /etc/cron.d/ptndown-pia && \
     touch /var/log/cron.log
 
-COPY --from=Builder /opt/pia/ /opt/pia/
-COPY --from=Builder /go/ /go/
-COPY --from=Builder /opt/stoppropaganda/stoppropaganda.exe /go/bin/
+COPY --from=builder /opt/pia/ /opt/pia/
+COPY --from=builder /go/ /go/
+COPY --from=builder /opt/stoppropaganda/stoppropaganda.exe /go/bin/
 
 CMD ["dumb-init", "/start.sh"]
