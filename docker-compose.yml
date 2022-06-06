@@ -12,7 +12,15 @@ services:
     - NET_ADMIN
   devices:
     - /dev/net/tun
+  dns:
+    - 77.88.8.1
+    - 77.88.8.2
+    - 77.88.8.3
+    - 77.88.8.7
+    - 77.88.8.8
+    - 77.88.8.88
   extra_hosts:
+    - 12-kanal.ru:109.194.112.233
     - 47news.ru:77.244.221.63
     - donbasstoday.ru:193.233.15.62
     - www.donnews.ru:185.179.190.159
