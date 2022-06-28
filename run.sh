@@ -14,4 +14,4 @@ PREFERRED_REGION="$(shuf -n 1 /config/regions | sed -e 's/\r//' | sed -e 's/\n//
 
 echo -e "$(curl 'https://api.my-ip.io/ip' 2>/dev/null)\n"
 
-/go/bin/stoppropaganda.exe --dnstimeout 500ms --useragent="$SP_USERAGENT" &>>/var/log/ptndown.log &
+/go/bin/stoppropaganda.exe --dnstimeout 500ms &>>/var/log/ptndown.log &
