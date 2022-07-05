@@ -25,10 +25,12 @@ services:
     - 47news.ru:77.244.221.63
     - donbasstoday.ru:193.233.15.62
     - www.donnews.ru:185.179.190.159
+    - www.europereloaded.com:147.135.97.116
     - fine-news.ru:213.139.208.57
     - mosregtoday.ru:178.154.213.69
     - novorossiia.ru:87.236.16.191
     - pizzahut.ru:185.98.84.80
+    - politcentr.ru:87.236.16.126
     - russia-insider.com:158.69.116.70
     - sbarro-pizza.ru:185.165.123.36
     - www.voltairenet.org:65.108.13.235
